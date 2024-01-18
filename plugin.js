@@ -1,5 +1,3 @@
-require("./plugin.css");
-
 function $parcel$export(e, n, v, s) {
   Object.defineProperty(e, n, {get: v, set: s, enumerable: true, configurable: true});
 }
@@ -17676,8 +17674,7 @@ function $f561670ffb5d0e81$var$getDataState(state) {
 } ////////////////////////////////////////////////////////////////////////////////
 
 
-
-
+// import "@reach/combobox/styles.css";
 const $40e8cc6bc7b45270$var$containerStyle = {
     // width: "400px",
     height: "400px"
@@ -17733,7 +17730,14 @@ function $40e8cc6bc7b45270$var$Map({ defaultCenter: defaultCenter , zoom: zoom =
     return /*#__PURE__*/ (0, $944afaf509867b8c$exports.jsxs)((0, $944afaf509867b8c$exports.Fragment), {
         children: [
             /*#__PURE__*/ (0, $944afaf509867b8c$exports.jsx)("div", {
-                className: "places-container",
+                style: {
+                    position: "absolute",
+                    top: "10px",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    zIndex: 10,
+                    width: "300px"
+                },
                 children: /*#__PURE__*/ (0, $944afaf509867b8c$exports.jsx)($40e8cc6bc7b45270$var$PlacesAutocomplete, {
                     setSelected: setSelected,
                     setCenter: setCenter
@@ -17744,7 +17748,6 @@ function $40e8cc6bc7b45270$var$Map({ defaultCenter: defaultCenter , zoom: zoom =
                 zoom: zoom,
                 center: center,
                 options: options,
-                mapContainerClassName: "map-container",
                 onClick: handelMarkerPosition,
                 children: selected && /*#__PURE__*/ (0, $944afaf509867b8c$exports.jsx)((0, $f58264a545ee8555$export$e98856a975cab58e), {
                     position: selected
@@ -17788,7 +17791,10 @@ const $40e8cc6bc7b45270$var$PlacesAutocomplete = ({ setSelected: setSelected , s
                 value: value,
                 onChange: (e)=>setValue(e.target.value),
                 disabled: !ready,
-                className: "combobox-input",
+                style: {
+                    width: "100%",
+                    padding: "0.5rem"
+                },
                 placeholder: "Search an address"
             }),
             /*#__PURE__*/ (0, $944afaf509867b8c$exports.jsx)((0, $f561670ffb5d0e81$export$c30c2e0bdc44ec0e), {
